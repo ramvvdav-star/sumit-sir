@@ -13,42 +13,42 @@ export const Ventures: React.FC = () => {
     : PORTFOLIO_DATA.ventures.filter(v => v.category === filterCategory);
 
   return (
-    <section id="ventures" className="py-20 lg:py-28 bg-[#080D1A] relative">
+    <section id="ventures" className="py-20 lg:py-28 bg-[#09090C] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#D4AF37] mb-3">
+            <div className="flex items-center gap-2 text-xs font-bold tracking-wider uppercase text-[#EAB308] mb-3">
               <span>Leadership & Organizations</span>
-              <span aria-hidden="true" className="text-slate-600">·</span>
+              <span aria-hidden="true" className="text-zinc-600">·</span>
               <span>Documented Entities</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight leading-tight">
               Ventures & Initiatives.
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
+            <p className="mt-4 text-sm sm:text-base text-zinc-300 leading-relaxed">
               Every initiative represents an institutional response to a specific systemic challenge in education—from early school choice to global diplomatic academic alliances.
             </p>
           </div>
 
-          <div className="mt-6 md:mt-0 text-xs text-slate-400 font-mono">
+          <div className="mt-6 md:mt-0 text-xs text-zinc-400 font-mono">
             <span>6 Documented Initiatives</span>
             <span aria-hidden="true" className="mx-2">·</span>
-            <span className="text-[#D4AF37]">Verified Public Records</span>
+            <span className="text-[#EAB308]">Verified Public Records</span>
           </div>
         </div>
 
         {/* Category Filter Buttons (Functional segmented buttons) */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-4 mb-8 text-xs scrollbar-none">
+        <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 text-xs scrollbar-none">
           {categories.map(cat => (
             <button
               key={cat}
               onClick={() => setFilterCategory(cat)}
-              className={`px-3.5 py-2 rounded-md font-medium whitespace-nowrap transition-colors cursor-pointer ${
+              className={`px-4 py-2 rounded-xl font-medium whitespace-nowrap transition-colors cursor-pointer ${
                 filterCategory === cat
-                  ? 'bg-white text-slate-900 shadow-sm font-semibold'
-                  : 'bg-slate-900/80 text-slate-300 hover:text-white border border-slate-800'
+                  ? 'bg-[#EAB308] text-zinc-950 font-bold shadow-sm'
+                  : 'bg-[#141418] text-zinc-300 hover:text-white border border-zinc-800 hover:border-zinc-700'
               }`}
             >
               {cat}
@@ -61,34 +61,34 @@ export const Ventures: React.FC = () => {
           {filteredVentures.map((venture) => (
             <div
               key={venture.id}
-              className="group bg-slate-900/70 border border-slate-800 hover:border-slate-700/80 rounded-xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
+              className="group bg-[#121215] border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:shadow-xl"
             >
               <div>
                 {/* Header row: Category & Role (Unboxed metadata) */}
-                <div className="flex items-center justify-between text-xs text-slate-400 mb-4 pb-3 border-b border-slate-800/80">
-                  <span className="font-mono text-[#D4AF37] font-medium">{venture.category}</span>
+                <div className="flex items-center justify-between text-xs text-zinc-400 mb-4 pb-3 border-b border-zinc-800/80">
+                  <span className="font-mono text-[#EAB308] font-bold">{venture.category}</span>
                   <span>{venture.established}</span>
                 </div>
 
                 {/* Venture Name & Tagline */}
-                <h3 className="text-xl font-serif font-bold text-white group-hover:text-[#D4AF37] transition-colors mb-2">
+                <h3 className="text-xl font-serif font-bold text-white group-hover:text-[#EAB308] transition-colors mb-2">
                   {venture.name}
                 </h3>
                 
                 {/* Confirmed Role Badge (Single unboxed line) */}
-                <div className="text-xs font-semibold text-slate-200 mb-4 flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
+                <div className="text-xs font-semibold text-zinc-200 mb-4 flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#EAB308]" />
                   <span>{venture.role}</span>
                 </div>
 
                 {/* Summary */}
-                <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                <p className="text-sm text-zinc-300 leading-relaxed mb-6">
                   {venture.summary}
                 </p>
 
                 {/* Key Documented Milestone Preview */}
-                <div className="bg-[#0B1120] border border-slate-800/80 rounded-lg p-3.5 mb-6 text-xs text-slate-300">
-                  <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wider block mb-1">
+                <div className="bg-[#09090C] border border-zinc-800/80 rounded-xl p-3.5 mb-6 text-xs text-zinc-300">
+                  <span className="text-[10px] font-mono text-[#EAB308] uppercase tracking-wider block mb-1">
                     Key Documented Outcome
                   </span>
                   <p className="line-clamp-2 leading-relaxed">
@@ -98,15 +98,15 @@ export const Ventures: React.FC = () => {
               </div>
 
               {/* Card Footer: Detail Modal Trigger */}
-              <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between">
-                <div className="text-[11px] text-slate-400 flex items-center gap-1">
+              <div className="pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+                <div className="text-[11px] text-zinc-400 flex items-center gap-1">
                   <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                   <span>{venture.verificationStatus}</span>
                 </div>
 
                 <button
                   onClick={() => setSelectedVenture(venture)}
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#D4AF37] hover:text-amber-300 transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#EAB308] hover:text-amber-300 transition-colors cursor-pointer"
                 >
                   <span>View Dossier</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />

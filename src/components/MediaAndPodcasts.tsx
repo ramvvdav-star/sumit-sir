@@ -6,26 +6,26 @@ export const MediaAndPodcasts: React.FC = () => {
   const [activeEpisode, setActiveEpisode] = useState<MediaEpisode | null>(null);
 
   return (
-    <section id="media" className="py-20 lg:py-28 bg-[#070B14] border-t border-slate-800/80">
+    <section id="media" className="py-20 lg:py-28 bg-[#09090C] border-t border-zinc-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#D4AF37] mb-3">
+            <div className="flex items-center gap-2 text-xs font-bold tracking-wider uppercase text-[#EAB308] mb-3">
               <span>Thought Leadership</span>
-              <span aria-hidden="true" className="text-slate-600">·</span>
+              <span aria-hidden="true" className="text-zinc-600">·</span>
               <span>Podcasts & Public Appearances</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight leading-tight">
               Educational Media & Dialogue.
             </h2>
-            <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
+            <p className="mt-4 text-sm sm:text-base text-zinc-300 leading-relaxed">
               Curating thoughtful conversations with school leaders, child psychologists, collegiate deans, and educators to unpack the evolving challenges of Indian education.
             </p>
           </div>
 
-          <div className="mt-4 md:mt-0 text-xs font-mono text-slate-400">
+          <div className="mt-4 md:mt-0 text-xs font-mono text-zinc-400">
             <span>SERIES: BrewED Talks · Partners in Parenting</span>
           </div>
         </div>
@@ -35,18 +35,18 @@ export const MediaAndPodcasts: React.FC = () => {
           {PORTFOLIO_DATA.mediaEpisodes.map((ep) => (
             <div
               key={ep.id}
-              className="bg-slate-900/60 border border-slate-800 hover:border-slate-700 rounded-xl p-6 flex flex-col justify-between transition-all group"
+              className="bg-[#121215] border border-zinc-800 hover:border-zinc-700 rounded-2xl p-6 sm:p-7 flex flex-col justify-between transition-all group"
             >
               <div>
-                <div className="flex items-center justify-between text-xs text-slate-400 mb-3 pb-3 border-b border-slate-800/80">
+                <div className="flex items-center justify-between text-xs text-zinc-400 mb-3 pb-3 border-b border-zinc-800/80">
                   <div className="flex items-center gap-2">
-                    <Radio className="w-3.5 h-3.5 text-[#D4AF37]" />
-                    <span className="font-mono text-[#D4AF37]">{ep.series}</span>
+                    <Radio className="w-3.5 h-3.5 text-[#EAB308]" />
+                    <span className="font-mono text-[#EAB308] font-bold">{ep.series}</span>
                   </div>
                   <span>{ep.recordedDate} · Approx {ep.durationApprox}</span>
                 </div>
 
-                <h3 className="text-lg font-serif font-bold text-white group-hover:text-[#D4AF37] transition-colors mb-2">
+                <h3 className="text-lg font-serif font-bold text-white group-hover:text-[#EAB308] transition-colors mb-2">
                   {ep.title}
                 </h3>
 
@@ -54,27 +54,27 @@ export const MediaAndPodcasts: React.FC = () => {
                   Featuring: {ep.featuredGuestOrTopic}
                 </p>
 
-                <p className="text-sm text-slate-300 leading-relaxed mb-5">
+                <p className="text-sm text-zinc-300 leading-relaxed mb-5">
                   {ep.description}
                 </p>
 
-                {/* Key Themes tags (unboxed text with separators) */}
-                <div className="flex flex-wrap items-center gap-2 text-xs text-slate-400 mb-6">
+                {/* Key Themes tags */}
+                <div className="flex flex-wrap items-center gap-2 text-xs text-zinc-400 mb-6">
                   {ep.keyThemes.map((theme, i) => (
                     <React.Fragment key={i}>
                       <span>{theme}</span>
-                      {i < ep.keyThemes.length - 1 && <span aria-hidden="true" className="text-slate-600">·</span>}
+                      {i < ep.keyThemes.length - 1 && <span aria-hidden="true" className="text-zinc-600">·</span>}
                     </React.Fragment>
                   ))}
                 </div>
               </div>
 
               {/* Action */}
-              <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between">
-                <span className="text-[11px] text-slate-400 font-mono">Archive: {ep.source}</span>
+              <div className="pt-4 border-t border-zinc-800/80 flex items-center justify-between">
+                <span className="text-[11px] text-zinc-400 font-mono">Archive: {ep.source}</span>
                 <button
                   onClick={() => setActiveEpisode(ep)}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-950 bg-[#D4AF37] hover:bg-[#E2BE48] rounded-md transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-zinc-950 bg-[#EAB308] hover:bg-[#F59E0B] rounded-lg transition-colors cursor-pointer shadow-sm"
                 >
                   <Headphones className="w-3.5 h-3.5" />
                   <span>Episode Brief</span>
@@ -84,31 +84,31 @@ export const MediaAndPodcasts: React.FC = () => {
           ))}
         </div>
 
-        {/* Awards & Public Registry Recognition Subsection (Section H) */}
-        <div className="pt-12 border-t border-slate-800">
+        {/* Awards & Public Registry Recognition Subsection */}
+        <div className="pt-12 border-t border-zinc-800">
           <div className="max-w-2xl mb-8">
-            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#D4AF37] mb-2">
+            <div className="flex items-center gap-2 text-xs font-bold tracking-wider uppercase text-[#EAB308] mb-2">
               <span>Public Recognition & Registry</span>
-              <span aria-hidden="true" className="text-slate-600">·</span>
+              <span aria-hidden="true" className="text-zinc-600">·</span>
               <span>Understated Standards</span>
             </div>
             <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white">
               Documented Recognitions & Registry Records.
             </h3>
-            <p className="text-sm text-slate-300 mt-2">
+            <p className="text-sm text-zinc-300 mt-2">
               Maintained with journalistic transparency, distinguishing official directory records from independent institutional audits.
             </p>
           </div>
 
-          <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-6 sm:p-8">
+          <div className="bg-[#121215] border border-zinc-800 rounded-2xl p-6 sm:p-8">
             <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
               
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-[#D4AF37] shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-[#EAB308] shrink-0">
                   <Award className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="flex items-center gap-2 text-xs font-mono text-[#D4AF37] mb-1">
+                  <div className="flex items-center gap-2 text-xs font-mono text-[#EAB308] mb-1 font-bold">
                     <span>Influencer Book of World Records</span>
                     <span aria-hidden="true">·</span>
                     <span>Registry Record No. 0198</span>
@@ -116,10 +116,10 @@ export const MediaAndPodcasts: React.FC = () => {
                   <h4 className="text-xl font-serif font-bold text-white mb-2">
                     India’s Emerging Edupreneur & Influential Leader In Education
                   </h4>
-                  <p className="text-xs text-slate-400 mb-3">
+                  <p className="text-xs text-zinc-400 mb-3">
                     Documented Record Entry Date: January 2025 · Registry Category: Education Leadership
                   </p>
-                  <p className="text-sm text-slate-300 leading-relaxed max-w-2xl">
+                  <p className="text-sm text-zinc-300 leading-relaxed max-w-2xl">
                     Recognized within the private record-book registry for entrepreneurial initiatives across school discovery and collegiate guidance in India.
                   </p>
                 </div>
@@ -130,7 +130,7 @@ export const MediaAndPodcasts: React.FC = () => {
                   href="https://www.influencerbookofworldrecords.com/recordDetail/sumit-verma4751"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium text-sky-400 hover:text-sky-300 bg-sky-950/40 border border-sky-800/60 rounded-md transition-colors"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium text-sky-400 hover:text-sky-300 bg-sky-950/40 border border-sky-800/60 rounded-xl transition-colors"
                 >
                   <span>View Registry Page</span>
                   <ExternalLink className="w-3.5 h-3.5" />
@@ -140,8 +140,8 @@ export const MediaAndPodcasts: React.FC = () => {
             </div>
 
             {/* Fact-Checking Integrity Callout */}
-            <div className="mt-6 pt-5 border-t border-slate-800/80 flex items-start gap-3 text-xs text-amber-200/90 bg-amber-500/5 p-4 rounded-lg border border-amber-500/15">
-              <Info className="w-4 h-4 text-[#D4AF37] shrink-0 mt-0.5" />
+            <div className="mt-6 pt-5 border-t border-zinc-800/80 flex items-start gap-3 text-xs text-amber-200/90 bg-amber-500/5 p-4 rounded-xl border border-amber-500/15">
+              <Info className="w-4 h-4 text-[#EAB308] shrink-0 mt-0.5" />
               <div>
                 <strong className="text-amber-200">Fact-Checking & Audit Note:</strong> In strict alignment with our verification standards, we document that this recognition is a third-party record directory listing rather than a statutory government honor. Physical certificate inspection is logged in the verification ledger to reconcile minor registration date discrepancies across external portals.
               </div>

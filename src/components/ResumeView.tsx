@@ -15,21 +15,21 @@ export const ResumeView: React.FC<ResumeViewProps> = ({ onOpenPdfViewer, onOpenV
   };
 
   return (
-    <section id="resume" className="py-20 lg:py-28 bg-[#070B14] border-t border-slate-800/80">
+    <section id="resume" className="py-20 lg:py-28 bg-[#09090C] border-t border-zinc-800/80">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 no-print">
           <div>
-            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#D4AF37] mb-3">
+            <div className="flex items-center gap-2 text-xs font-bold tracking-wider uppercase text-[#EAB308] mb-3">
               <span>Executive Dossier</span>
-              <span aria-hidden="true" className="text-slate-600">·</span>
+              <span aria-hidden="true" className="text-zinc-600">·</span>
               <span>Curriculum Vitae</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight leading-tight">
               Professional Resume.
             </h2>
-            <p className="mt-3 text-base text-slate-300 max-w-2xl leading-relaxed">
+            <p className="mt-3 text-sm sm:text-base text-zinc-300 max-w-2xl leading-relaxed">
               Curated from verified public records, institutional convenings, and documented entrepreneurial initiatives.
             </p>
           </div>
@@ -38,17 +38,17 @@ export const ResumeView: React.FC<ResumeViewProps> = ({ onOpenPdfViewer, onOpenV
           <div className="mt-6 md:mt-0 flex flex-wrap items-center gap-3">
             <button
               onClick={handlePrint}
-              className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-medium text-slate-200 bg-slate-800/80 hover:bg-slate-700 border border-slate-700 rounded-md transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 text-xs font-medium text-zinc-200 bg-[#141418] hover:bg-[#1C1C22] border border-zinc-750 rounded-xl transition-colors cursor-pointer"
               title="Print clean executive copy or save as PDF"
             >
-              <Printer className="w-3.5 h-3.5 text-slate-400" />
+              <Printer className="w-3.5 h-3.5 text-zinc-400" />
               <span>Print / Export PDF</span>
             </button>
 
             <a
               href={PORTFOLIO_DATA.profile.pdfAssetPath}
               download="Sumit_Varma_Resume_Information_Pack.pdf"
-              className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-slate-950 bg-[#D4AF37] hover:bg-[#E2BE48] rounded-md transition-all shadow-sm cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold text-zinc-950 bg-[#EAB308] hover:bg-[#F59E0B] rounded-xl transition-all shadow-md cursor-pointer"
               title="Download verified Information Pack"
             >
               <Download className="w-3.5 h-3.5" />
@@ -57,7 +57,7 @@ export const ResumeView: React.FC<ResumeViewProps> = ({ onOpenPdfViewer, onOpenV
 
             <button
               onClick={onOpenPdfViewer}
-              className="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-sky-400 bg-sky-950/40 hover:bg-sky-900/50 border border-sky-800/60 rounded-md transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-2.5 text-xs font-medium text-sky-400 bg-sky-950/40 hover:bg-sky-900/50 border border-sky-800/60 rounded-xl transition-colors cursor-pointer"
               title="Preview original research PDF"
             >
               <Eye className="w-3.5 h-3.5" />
@@ -67,23 +67,23 @@ export const ResumeView: React.FC<ResumeViewProps> = ({ onOpenPdfViewer, onOpenV
         </div>
 
         {/* View Switcher Tabs (no-print) */}
-        <div className="flex items-center gap-2 p-1 bg-slate-900 border border-slate-800 rounded-lg max-w-sm mb-8 no-print">
+        <div className="flex items-center gap-2 p-1.5 bg-[#141418] border border-zinc-800 rounded-xl max-w-sm mb-8 no-print">
           <button
             onClick={() => setViewMode('interactive')}
-            className={`flex-1 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer ${
+            className={`flex-1 py-1.5 text-xs font-medium rounded-lg transition-colors cursor-pointer ${
               viewMode === 'interactive'
-                ? 'bg-[#D4AF37] text-slate-950 font-semibold shadow-sm'
-                : 'text-slate-400 hover:text-white'
+                ? 'bg-[#EAB308] text-zinc-950 font-bold shadow-sm'
+                : 'text-zinc-400 hover:text-white'
             }`}
           >
             Executive Visual CV
           </button>
           <button
             onClick={() => setViewMode('ats')}
-            className={`flex-1 py-1.5 text-xs font-medium rounded-md transition-colors cursor-pointer ${
+            className={`flex-1 py-1.5 text-xs font-medium rounded-lg transition-colors cursor-pointer ${
               viewMode === 'ats'
-                ? 'bg-[#D4AF37] text-slate-950 font-semibold shadow-sm'
-                : 'text-slate-400 hover:text-white'
+                ? 'bg-[#EAB308] text-zinc-950 font-bold shadow-sm'
+                : 'text-zinc-400 hover:text-white'
             }`}
           >
             ATS-Friendly Plain Format
@@ -91,7 +91,7 @@ export const ResumeView: React.FC<ResumeViewProps> = ({ onOpenPdfViewer, onOpenV
         </div>
 
         {/* Resume Paper Container */}
-        <div className="bg-[#0B1120] print:bg-white print:text-black border border-slate-800 print:border-none rounded-xl p-8 sm:p-12 shadow-2xl print:shadow-none print-container">
+        <div className="bg-[#101014] print:bg-white print:text-black border border-zinc-800 print:border-none rounded-2xl p-8 sm:p-12 shadow-2xl print:shadow-none print-container">
           
           {/* Header Lockup */}
           <div className="border-b border-slate-800 print:border-black pb-8 mb-8">
@@ -100,7 +100,7 @@ export const ResumeView: React.FC<ResumeViewProps> = ({ onOpenPdfViewer, onOpenV
                 <h1 className="text-3xl sm:text-4xl font-serif font-bold text-white print:text-black tracking-tight">
                   Sumit Varma
                 </h1>
-                <p className="text-sm font-medium text-[#D4AF37] print:text-black mt-1">
+                <p className="text-sm font-medium text-[#EAB308] print:text-black mt-1">
                   Education Entrepreneur · Community Builder · Career Guidance Professional
                 </p>
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-400 print:text-black mt-3">

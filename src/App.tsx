@@ -30,7 +30,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#080D1A] text-slate-100 flex flex-col selection:bg-[#D4AF37]/30 selection:text-white">
+    <div className="min-h-screen bg-[#09090C] text-zinc-100 flex flex-col selection:bg-[#EAB308]/30 selection:text-white">
       {/* Top sticky navigation */}
       <Navbar
         onOpenVerificationLedger={() => setIsVerificationLedgerOpen(true)}

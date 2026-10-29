@@ -62,48 +62,48 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-28 bg-[#080D1A] border-t border-slate-800/80 relative">
+    <section id="contact" className="py-20 lg:py-28 bg-[#09090C] border-t border-zinc-800/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="max-w-3xl mb-12 sm:mb-16">
-          <div className="flex items-center gap-2 text-xs font-semibold tracking-wider uppercase text-[#D4AF37] mb-3">
+          <div className="flex items-center gap-2 text-xs font-bold tracking-wider uppercase text-[#EAB308] mb-3">
             <span>Collaboration & Inquiries</span>
-            <span aria-hidden="true" className="text-slate-600">·</span>
+            <span aria-hidden="true" className="text-zinc-600">·</span>
             <span>Professional Network</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight leading-tight">
             Connect & Collaborate.
           </h2>
-          <p className="mt-4 text-base sm:text-lg text-slate-300 leading-relaxed">
+          <p className="mt-4 text-sm sm:text-base text-zinc-300 leading-relaxed">
             For institutional alliances, keynote invitations, school discovery partnerships, or educational media dialogues, submit an inquiry below or connect via LinkedIn.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           
           {/* Left Column: Direct Links & Institutional Directory */}
           <div className="lg:col-span-5 space-y-6">
             
             {/* LinkedIn Card */}
-            <div className="bg-slate-900/70 border border-slate-800 rounded-xl p-6 sm:p-7">
+            <div className="bg-[#121215] border border-zinc-800 rounded-2xl p-6 sm:p-7 shadow-lg">
               <div className="flex items-center justify-between mb-4">
-                <div className="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/25 flex items-center justify-center text-sky-400">
+                <div className="w-10 h-10 rounded-xl bg-sky-500/10 border border-sky-500/25 flex items-center justify-center text-sky-400">
                   <Linkedin className="w-5 h-5" />
                 </div>
-                <span className="text-[11px] font-mono text-emerald-400">Verified Profile</span>
+                <span className="text-[11px] font-mono text-emerald-400 font-medium">Verified Profile</span>
               </div>
               <h3 className="text-lg font-serif font-bold text-white mb-1">
                 LinkedIn Executive Profile
               </h3>
-              <p className="text-xs text-slate-400 mb-4">
+              <p className="text-xs text-zinc-400 mb-4">
                 Primary channel for professional networking, institutional announcements, and direct messaging.
               </p>
               <a
                 href={PORTFOLIO_DATA.profile.linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold transition-colors w-full justify-center"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-xs font-bold transition-colors w-full justify-center shadow-sm"
               >
                 <span>Connect on LinkedIn</span>
                 <ExternalLink className="w-3.5 h-3.5" />

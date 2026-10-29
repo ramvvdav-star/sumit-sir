@@ -13,22 +13,22 @@ export const Footer: React.FC<FooterProps> = ({ onOpenVerificationLedger, onOpen
   };
 
   return (
-    <footer className="bg-[#050811] border-t border-slate-800/80 py-12 lg:py-16 text-slate-400 text-xs no-print">
+    <footer className="bg-[#070709] border-t border-zinc-800/80 py-12 lg:py-16 text-zinc-400 text-xs no-print">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Top Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-slate-800/80">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 pb-12 border-b border-zinc-800/80">
           
           {/* Brand Info */}
           <div className="md:col-span-5 space-y-3">
             <span className="text-lg font-serif font-bold text-white tracking-tight">
               SUMIT VARMA
             </span>
-            <p className="text-slate-300 max-w-sm leading-relaxed">
+            <p className="text-zinc-300 max-w-sm leading-relaxed">
               Education Entrepreneur & Community Builder. Connecting students, families, educators, and institutions across India.
             </p>
             <div className="flex items-center gap-2 text-xs text-amber-200/90 pt-1">
-              <ShieldCheck className="w-4 h-4 text-[#D4AF37]" />
+              <ShieldCheck className="w-4 h-4 text-[#EAB308]" />
               <span>Documented Public & Institutional Record</span>
             </div>
           </div>
