@@ -30,17 +30,15 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#09090C] text-zinc-100 flex flex-col selection:bg-[#EAB308]/30 selection:text-white">
+    <div className="min-h-screen bg-[#0D1826] text-[#FAF8F5] flex flex-col selection:bg-[#B39A68]/30 selection:text-[#FAF8F5]">
       {/* Top sticky navigation */}
       <Navbar
-        onOpenVerificationLedger={() => setIsVerificationLedgerOpen(true)}
         onOpenPdfViewer={() => setIsPdfViewerOpen(true)}
       />
 
       {/* Main Content Sections */}
       <main className="flex-1">
         <Hero
-          onOpenVerificationLedger={() => setIsVerificationLedgerOpen(true)}
           onOpenPdfViewer={() => setIsPdfViewerOpen(true)}
         />
         <Biography />
@@ -51,15 +49,14 @@ export default function App() {
         <Philosophy />
         <ResumeView
           onOpenPdfViewer={() => setIsPdfViewerOpen(true)}
-          onOpenVerificationLedger={() => setIsVerificationLedgerOpen(true)}
         />
         <Contact />
       </main>
 
       {/* Footer */}
       <Footer
-        onOpenVerificationLedger={() => setIsVerificationLedgerOpen(true)}
         onOpenPdfViewer={() => setIsPdfViewerOpen(true)}
+        onOpenVerificationLedger={() => setIsVerificationLedgerOpen(true)}
       />
 
       {/* Fact-Checking & Verification Audit Modal */}

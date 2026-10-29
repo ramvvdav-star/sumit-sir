@@ -11,23 +11,23 @@ export const PdfViewerModal: React.FC<PdfViewerModalProps> = ({ isOpen, onClose 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-slate-950/90 backdrop-blur-md animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-[#0D1826]/90 backdrop-blur-md animate-in fade-in duration-200">
       <div
-        className="bg-[#0B1120] border border-slate-700 rounded-xl w-full max-w-5xl h-[92vh] flex flex-col shadow-2xl relative overflow-hidden"
+        className="bg-[#142338] border border-[#E7E4DD]/20 rounded-lg w-full max-w-5xl h-[92vh] flex flex-col shadow-2xl relative overflow-hidden text-[#FAF8F5]"
         role="dialog"
         aria-modal="true"
       >
         {/* Modal Top Bar */}
-        <div className="px-6 py-4 bg-slate-900 border-b border-slate-800 flex items-center justify-between shrink-0">
+        <div className="px-6 py-4 bg-[#0D1826] border-b border-[#E7E4DD]/15 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded bg-amber-500/10 border border-amber-500/25 flex items-center justify-center text-[#D4AF37]">
+            <div className="w-8 h-8 rounded bg-[#B39A68]/15 border border-[#B39A68]/30 flex items-center justify-center text-[#B39A68]">
               <FileText className="w-4 h-4" />
             </div>
             <div>
               <h3 className="text-sm font-semibold text-white leading-tight">
                 Sumit Varma — Resume Information Pack & Research Profile
               </h3>
-              <p className="text-[11px] text-slate-400">
+              <p className="text-[11px] text-[#EAE6DF]/60">
                 Official source document (6 pages) · Verified research starting point
               </p>
             </div>
@@ -37,7 +37,7 @@ export const PdfViewerModal: React.FC<PdfViewerModalProps> = ({ isOpen, onClose 
             <a
               href={PORTFOLIO_DATA.profile.pdfAssetPath}
               download="Sumit_Varma_Resume_Information_Pack.pdf"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-950 bg-[#D4AF37] hover:bg-[#E2BE48] rounded-md transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-[#0D1826] bg-[#B39A68] hover:bg-[#C2A875] rounded transition-colors"
             >
               <Download className="w-3.5 h-3.5" />
               <span className="hidden sm:inline">Download PDF</span>

@@ -29,41 +29,40 @@ export const Timeline: React.FC = () => {
   };
 
   return (
-    <section id="timeline" className="py-20 lg:py-28 bg-[#09090C] border-t border-zinc-800/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="timeline" className="py-24 lg:py-32 bg-[#0D1826] text-[#FAF8F5] border-t border-[#E7E4DD]/10">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-[#E7E4DD]/15">
           <div className="max-w-2xl">
-            <div className="flex items-center gap-2 text-xs font-bold tracking-wider uppercase text-[#EAB308] mb-3">
+            <div className="flex items-center gap-3 text-xs font-mono uppercase tracking-[0.2em] text-[#B39A68] mb-4">
               <span>Career Trajectory</span>
-              <span aria-hidden="true" className="text-zinc-600">·</span>
+              <span className="text-[#E7E4DD]/30">/</span>
               <span>Documented Milestones</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight leading-tight">
               Chronological Career Journey.
             </h2>
-            <p className="mt-4 text-sm sm:text-base text-zinc-300 leading-relaxed">
+            <p className="mt-4 text-base text-[#EAE6DF]/80 leading-relaxed">
               A transparent chronological record of entrepreneurial milestones, public convenings, media productions, and institutional alliances across India.
             </p>
           </div>
 
-          <div className="mt-6 md:mt-0 flex items-center gap-2 text-xs text-amber-200 bg-[#141418] border border-amber-500/30 px-3.5 py-2 rounded-xl">
-            <ShieldCheck className="w-4 h-4 text-[#EAB308] shrink-0" />
-            <span>Every entry corresponds directly to verified source documentation</span>
+          <div className="mt-6 md:mt-0 flex items-center gap-2 text-xs font-mono text-[#B39A68] bg-[#142338] border border-[#E7E4DD]/15 px-4 py-2 rounded">
+            <span>Verified Primary & Public Citations</span>
           </div>
         </div>
 
         {/* Filter buttons */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-10 text-xs scrollbar-none">
+        <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-12 text-xs scrollbar-none">
           {categories.map(cat => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className={`px-4 py-2 rounded-xl font-medium whitespace-nowrap transition-colors cursor-pointer ${
+              className={`px-4 py-2 rounded text-xs uppercase tracking-wider font-medium whitespace-nowrap transition-colors cursor-pointer ${
                 filter === cat
-                  ? 'bg-[#EAB308] text-zinc-950 font-bold shadow-sm'
-                  : 'bg-[#141418] text-zinc-300 hover:text-white border border-zinc-800 hover:border-zinc-700'
+                  ? 'bg-[#B39A68] text-[#0D1826] font-bold shadow-sm'
+                  : 'bg-[#142338] text-[#EAE6DF]/80 hover:text-white border border-[#E7E4DD]/15 hover:border-[#B39A68]'
               }`}
             >
               {cat}
